@@ -16,6 +16,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="EIh-dy-z8k" detailTextLabel="wbB-Z7-Hdt" style="IBUITableViewCellStyleSubtitle" id="H0H-Tt-8uB">
+                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="H0H-Tt-8uB" id="dCN-2w-j3f">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EIh-dy-z8k">
+                                            <rect key="frame" x="20" y="10" width="33" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wbB-Z7-Hdt">
+                                            <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" title="GRABACIONES" id="vj6-IS-0fb">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="0zT-3Z-MxE">
@@ -68,8 +94,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6k-9Z-g1s">
-                                <rect key="frame" x="179.5" y="503.5" width="55" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6k-9Z-g1s">
+                                <rect key="frame" x="180" y="610" width="55" height="30"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <state key="normal" title="Agregar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -78,6 +104,13 @@
                                     <action selector="agregarTapped:" destination="MDa-Zf-kx1" eventType="touchUpInside" id="aM9-um-Vx8"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ce8-pI-kBT">
+                                <rect key="frame" x="20" y="503.5" width="374" height="37"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="31"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wlO-kw-udz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -86,17 +119,21 @@
                             <constraint firstItem="qMc-wO-pwB" firstAttribute="centerX" secondItem="wlO-kw-udz" secondAttribute="centerX" id="9xA-xD-AbI"/>
                             <constraint firstItem="luv-vb-Lur" firstAttribute="top" secondItem="wlO-kw-udz" secondAttribute="top" constant="20" id="CbN-uI-ILA"/>
                             <constraint firstItem="bSF-M6-x2X" firstAttribute="top" secondItem="luv-vb-Lur" secondAttribute="bottom" constant="20" id="DFI-wM-R14"/>
+                            <constraint firstItem="wlO-kw-udz" firstAttribute="trailing" secondItem="Ce8-pI-kBT" secondAttribute="trailing" constant="20" id="Iqe-gI-MjJ"/>
                             <constraint firstItem="wPG-tv-tKl" firstAttribute="leading" secondItem="wlO-kw-udz" secondAttribute="leading" constant="20" id="Lcn-HC-qcV"/>
-                            <constraint firstItem="r6k-9Z-g1s" firstAttribute="top" secondItem="wPG-tv-tKl" secondAttribute="bottom" constant="20" id="N6y-G5-u20"/>
                             <constraint firstItem="wlO-kw-udz" firstAttribute="trailing" secondItem="wPG-tv-tKl" secondAttribute="trailing" constant="20" id="Nl0-Ny-hmn"/>
                             <constraint firstItem="wPG-tv-tKl" firstAttribute="top" secondItem="qMc-wO-pwB" secondAttribute="bottom" constant="20" id="QWg-aa-kou"/>
                             <constraint firstItem="wPG-tv-tKl" firstAttribute="centerX" secondItem="wlO-kw-udz" secondAttribute="centerX" id="TaS-HG-DbH"/>
                             <constraint firstItem="r6k-9Z-g1s" firstAttribute="centerX" secondItem="wlO-kw-udz" secondAttribute="centerX" id="WWA-IS-vcP"/>
+                            <constraint firstItem="Ce8-pI-kBT" firstAttribute="leading" secondItem="wlO-kw-udz" secondAttribute="leading" constant="20" id="Xaj-eU-zEv"/>
                             <constraint firstItem="luv-vb-Lur" firstAttribute="centerX" secondItem="wlO-kw-udz" secondAttribute="centerX" id="YZ3-rZ-aOy"/>
+                            <constraint firstItem="r6k-9Z-g1s" firstAttribute="top" secondItem="Ce8-pI-kBT" secondAttribute="bottom" constant="20" id="bNT-rT-jVr"/>
+                            <constraint firstItem="Ce8-pI-kBT" firstAttribute="top" secondItem="wPG-tv-tKl" secondAttribute="bottom" constant="20" id="d7v-oT-UIs"/>
                             <constraint firstItem="bSF-M6-x2X" firstAttribute="centerX" secondItem="wlO-kw-udz" secondAttribute="centerX" id="keR-8d-n6d"/>
                             <constraint firstItem="qMc-wO-pwB" firstAttribute="top" secondItem="bSF-M6-x2X" secondAttribute="bottom" constant="30" id="nAU-vL-lfK"/>
                             <constraint firstItem="qMc-wO-pwB" firstAttribute="leading" secondItem="wlO-kw-udz" secondAttribute="leading" constant="20" id="qkM-ef-a19"/>
                             <constraint firstItem="wlO-kw-udz" firstAttribute="trailing" secondItem="qMc-wO-pwB" secondAttribute="trailing" constant="20" id="s08-Db-Acr"/>
+                            <constraint firstItem="Ce8-pI-kBT" firstAttribute="top" secondItem="wPG-tv-tKl" secondAttribute="bottom" constant="20" id="ux6-Fj-3ch"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3eI-PC-ctZ"/>
@@ -105,11 +142,12 @@
                         <outlet property="grabarButton" destination="luv-vb-Lur" id="e6j-TP-v7n"/>
                         <outlet property="nombreTextField" destination="wPG-tv-tKl" id="tTr-HC-zeX"/>
                         <outlet property="reproducirButton" destination="bSF-M6-x2X" id="Yms-2w-c8A"/>
+                        <outlet property="timer" destination="Ce8-pI-kBT" id="Jah-g7-wlv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ON4-rW-Y13" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1509" y="78"/>
+            <point key="canvasLocation" x="1508.6956521739132" y="77.678571428571431"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="C6B-r1-PZE">
@@ -133,6 +171,9 @@
     <resources>
         <image name="grabar1" width="128" height="128"/>
         <image name="play" width="128" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
